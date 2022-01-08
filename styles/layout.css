@@ -13,7 +13,7 @@ body, #container {
 #controls {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     text-align: center;
     border: 2px solid black;
     border-radius: 12px;
