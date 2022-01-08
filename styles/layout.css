@@ -33,7 +33,7 @@ body, #container {
     flex-direction: row;
     flex-wrap: wrap;
     height: 460px;
-    width: 460px;
+    width: 660px;
     border: 2px solid black;
     border-radius: 12px;
 }
