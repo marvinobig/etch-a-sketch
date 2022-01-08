@@ -28,7 +28,7 @@ body, #container {
     border-radius: 6px;
 }
 
-#gridSquare {
+#gridDisplay {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
