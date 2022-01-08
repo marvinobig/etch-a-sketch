@@ -25,6 +25,7 @@ body, #container {
     width: 60px;
     background-color: red;
     margin: auto;
+    border-radius: 6px;
 }
 
 #gridSquare {
