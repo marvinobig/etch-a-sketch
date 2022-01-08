@@ -1,1 +1,44 @@
+body, #container {
+    height: 100vh;
+}
 
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+#colorChoice {
+    height: 30px;
+    width: 60px;
+    background-color: red;
+    margin: auto;
+}
+
+#gridSquare {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 460px;
+    width: 460px;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+}
