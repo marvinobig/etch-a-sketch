@@ -1,5 +1,5 @@
 function gridGen() {
-/*  Initialise a variable that gets grid size data from form text input.
+/*  Initialise a variable that gets grid size data from from text input.
     Turn variable data from string to number data type.
     Use variable data to create columns & rows of the same number. */
 }
