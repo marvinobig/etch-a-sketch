@@ -4,37 +4,42 @@ function gridGen() {
     let gridSize = document.getElementById("gridInput").value; //Initialise a variable that gets grid size data from from text input.
     let gridNum = Number(gridSize); //Turn variable data from string to number data type.
         
-    //Use variable data to create columns & rows of the same number.
-    let gridContainer = document.getElementById("gridDisplay"); 
-        
-    if (gridContainer.firstChild) {
-        while (gridContainer.firstChild) {
-            gridContainer.removeChild(gridContainer.lastChild);
-        };
 
-        for (i = 0; i < gridNum; i++) {
-            let gridParent = document.createElement("div");
-            gridParent.classList.add("gridParent");
-            gridContainer.appendChild(gridParent);
-        
-            for (c = 0; c < gridNum; c++) {
-                let gridChild = document.createElement("div");
-                gridChild.classList.add("gridChild");
-                gridParent.appendChild(gridChild);
+    if (gridNum >= 10 && gridNum <= 100) {
+        //Use variable data to create columns & rows of the same number.
+        let gridContainer = document.getElementById("gridDisplay"); 
+            
+        if (gridContainer.firstChild) {
+            while (gridContainer.firstChild) {
+                gridContainer.removeChild(gridContainer.lastChild);
             };
-        };
+
+            for (i = 0; i < gridNum; i++) {
+                let gridParent = document.createElement("div");
+                gridParent.classList.add("gridParent");
+                gridContainer.appendChild(gridParent);
+            
+                for (c = 0; c < gridNum; c++) {
+                    let gridChild = document.createElement("div");
+                    gridChild.classList.add("gridChild");
+                    gridParent.appendChild(gridChild);
+                };
+            };
+        }else {
+            for (i = 0; i < gridNum; i++) {
+                let gridParent = document.createElement("div");
+                gridParent.classList.add("gridParent");
+                gridContainer.appendChild(gridParent);
+            
+                for (c = 0; c < gridNum; c++) {
+                    let gridChild = document.createElement("div");
+                    gridChild.classList.add("gridChild");
+                    gridParent.appendChild(gridChild);
+                };
+            };
+        }
     }else {
-        for (i = 0; i < gridNum; i++) {
-            let gridParent = document.createElement("div");
-            gridParent.classList.add("gridParent");
-            gridContainer.appendChild(gridParent);
-        
-            for (c = 0; c < gridNum; c++) {
-                let gridChild = document.createElement("div");
-                gridChild.classList.add("gridChild");
-                gridParent.appendChild(gridChild);
-            };
-        };
+        alert("Enter a number between 10 and 100");
     }
 };
 
