@@ -1,7 +1,7 @@
 # Odin-Etch-A-Sketch
 An app that allows users to create an image or random drawing by hovering with their mouse over grid.
 
-##Languages used:
+## Languages used:
 * JavaScript
 * HTML
 * CSS
@@ -10,3 +10,5 @@ An app that allows users to create an image or random drawing by hovering with t
 * Visual Studio Code
 * Firefox Dev Tools
 * Chrome Dev Tools
+
+[Live View](https://marvinobig.github.io/projects/odin-etch-a-sketch/index.html).
