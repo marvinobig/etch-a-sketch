@@ -7,30 +7,50 @@ function gridGen() {
     //Use variable data to create columns & rows of the same number.
     let gridContainer = document.getElementById("gridDisplay"); 
         
-    for (i = 0; i < gridNum; i++) {
-        let gridParent = document.createElement("div");
-        gridParent.classList.add("gridParent");
-        gridContainer.appendChild(gridParent);
-    
-        for (j = 0; j < gridNum; j++) {
-            let gridChild = document.createElement("div");
-            gridChild.classList.add("gridChild");
-            gridParent.appendChild(gridChild);
+    if (gridContainer.firstChild) {
+        while (gridContainer.firstChild) {
+            gridContainer.removeChild(gridContainer.lastChild);
         };
-    };
+
+        for (i = 0; i < gridNum; i++) {
+            let gridParent = document.createElement("div");
+            gridParent.classList.add("gridParent");
+            gridContainer.appendChild(gridParent);
+        
+            for (c = 0; c < gridNum; c++) {
+                let gridChild = document.createElement("div");
+                gridChild.classList.add("gridChild");
+                gridParent.appendChild(gridChild);
+            };
+        };
+    }else {
+        for (i = 0; i < gridNum; i++) {
+            let gridParent = document.createElement("div");
+            gridParent.classList.add("gridParent");
+            gridContainer.appendChild(gridParent);
+        
+            for (c = 0; c < gridNum; c++) {
+                let gridChild = document.createElement("div");
+                gridChild.classList.add("gridChild");
+                gridParent.appendChild(gridChild);
+            };
+        };
+    }
 };
 
 
 
 
-document.getElementById("useColor").addEventListener("click", colorChoice);
-
-function colorChoice() {    
-    //Initialise a variable that gets color choice from the down menu.
-    //Initialise another variable that gets the user's custom color choice from form text input in hex code format.
+document.getElementById("gridDisplay").addEventListener("mouseover", function colorChoice(e){
+    const target = e.target; //Initialise a variable that gets color choice from menu.
     //Use variable data to set background color of generated grid by using class name (gridChild) for the generated grid to target them. 
-    //Add an event listener for mouse hover that triggers the function.
-};
+    let colorHex = document.getElementById("colorHex").value;
+    let gridContainer = document.getElementById("gridDisplay");
+
+    if (target != gridContainer) {
+      e.target.style.backgroundColor = colorHex;
+    }; 
+});
 
 
 
@@ -39,4 +59,9 @@ document.getElementById("reset").addEventListener("click", reset);
 
 function reset() {
     //A reset  button can be clicked to erase grid & color choices.
+    let gridContainer = document.getElementById("gridDisplay");
+    
+    while (gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.lastChild);
+    };
 };
