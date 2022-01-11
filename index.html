@@ -26,34 +26,13 @@
           /><br />
           <button id="generate">Generate</button>
         </div>
+
         <!-- Default colors -->
         <div id="colorPicker">
-          <label for="colorOptions">Color</label><br />
-          <input
-            list="colors"
-            id="colorOptions"
-            placeholder="Choose from options"
-          /><br />
-          <!-- Color options -->
-          <datalist id="colors">
-            <option value="red"></option>
-            <option value="green"></option>
-            <option value="blue"></option>
-            <option value="yellow"></option>
-            <option value="black"></option>
-          </datalist>
-
-          <button id="useColor">Use</button>
-
-          <br /><br />
-
-          <!-- Input hex code color (options of default colors available) -->
+          <!-- Input hex code color -->
           <label for="colorHex">Custom Color</label><br />
-          <input type="text" id="colorHex" placeholder="#000000" /><br />
-          <button id="useColorHex">Use</button>
+          <input type="color" id="colorHex" placeholder="#000000" /><br />
         </div>
-        <!-- Show the chosen color on a square. -->
-        <div id="colorChoice"></div>
 
         <!-- A reset  button can be clicked to erase grid & color choices. -->
         <button id="reset">Reset</button>
