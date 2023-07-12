@@ -11,4 +11,4 @@ An app that allows users to create an image or random drawing by hovering with t
 * Firefox Dev Tools
 * Chrome Dev Tools
 
-[Live View](https://marvinobig.github.io/projects/odin-etch-a-sketch/index.html)
+[Live View](#)
