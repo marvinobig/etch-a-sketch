@@ -11,4 +11,4 @@ An app that allows users to create an image or random drawing.
 * Firefox Dev Tools
 * Chrome Dev Tools
 
-[Live View](#)
+[Live View](https://marvinobig.online/etch-a-sketch/)
